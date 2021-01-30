@@ -32,6 +32,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (_isAlarm)
         {
             _uiService.ShowPopup(new MainPopupDTO() { Description = "Deneme postudur.", Title = "Deniyoruz", Type = PopupType.OkCancel, OkButtonClickAction = SahneDegis });
@@ -41,7 +42,6 @@ public class EnemyMove : MonoBehaviour
 
     void SahneDegis()
     {
-        Debug.Log("sahne değiş");
     }
 
     void PlayerNearby()

@@ -1,17 +1,17 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
 
     private Rigidbody _rigidbody;
-    public PlayerStats _stats;
+    private PlayerStats _stats;
  
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _stats = GetComponent<PlayerStats>();
-      
+        _stats = Container.Instance.PlayerStats;
     }
 
     void Start()
@@ -24,14 +24,7 @@ public class Mover : MonoBehaviour
         if (Input.GetAxisRaw("Vertical")!=0)
         {
             Vector3 forward = Input.GetAxisRaw("Vertical") < 0 ? -transform.forward/2 : transform.forward;
-           
             _rigidbody.MovePosition( _rigidbody.transform.position + forward * _stats.MoveSpeed * Time.deltaTime);
         }
-
-       
-
-
-
-      
     }
 }

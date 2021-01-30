@@ -137,6 +137,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eeac2c4f19c46c4396ea004df0edb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3317714960472167113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675182915639920790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64ba085509f7784e87892c9f308e9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8484454733166735628
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8484454733166735628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.795, y: 1.0310001, z: -4.3377237}
+  m_LocalPosition: {x: 0.795, y: 1.0310001, z: -4.3377266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5191644757312277335}
@@ -246,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 1871701002743230636, guid: beee15f157c4b9c4e80bc3ab612df3ba,
         type: 3}
       propertyPath: MoveSpeed
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2924351244802677698, guid: beee15f157c4b9c4e80bc3ab612df3ba,
         type: 3}
@@ -495,6 +507,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beee15f157c4b9c4e80bc3ab612df3ba, type: 3}
+--- !u!1 &6675182915639920790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8915007480519486277, guid: beee15f157c4b9c4e80bc3ab612df3ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2817981709044753363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6675182915639920791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8915007480519486276, guid: beee15f157c4b9c4e80bc3ab612df3ba,
