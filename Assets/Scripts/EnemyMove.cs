@@ -24,7 +24,12 @@ public class EnemyMove : MonoBehaviour
     {
         if (_isAlarm)
         {
-            _uiService.ShowPopup(new MainPopupDTO() { Description = "Deneme postudur.", Title = "Deniyoruz", Type = PopupType.Information });
+            _uiService.ShowPopup(new MainPopupDTO() { Description = "Deneme postudur.", Title = "Deniyoruz", Type = PopupType.OkCancel, OkButtonClickAction = SahneDegis });
         }
+    }
+
+    void SahneDegis()
+    {
+        Debug.Log("sahne değiş");
     }
 }

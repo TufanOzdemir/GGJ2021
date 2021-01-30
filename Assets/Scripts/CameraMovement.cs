@@ -21,14 +21,17 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch += speedV * Input.GetAxis("Mouse Y");
 
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, yaw, 0) * Time.deltaTime);
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 0f);
-        
-        //rb.MoveRotation(transform.rotation * deltaRotation);
+        transform.eulerAngles = new Vector3(pitch * -1f, yaw, 0f);
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            var rotation = Quaternion.Euler(new Vector3(transform.rotation.y, 0, 0) * Time.deltaTime);
+            rb.MoveRotation(rotation * deltaRotation);
+        }
     }
 }
