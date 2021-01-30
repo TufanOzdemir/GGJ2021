@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7080193203681940643}
   - component: {fileID: 579342156}
   - component: {fileID: 90973922}
+  - component: {fileID: 1413171298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -143,9 +144,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &579342156
 MonoBehaviour:
@@ -177,6 +178,25 @@ CapsuleCollider:
   m_Height: 1.82
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &1413171298
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080193203681940645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+  m_Controller: {fileID: 9100000, guid: ac773cb9b7ad8c34ea60a73c39501d65, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7080193203263663456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,7 +272,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9593232, guid: 507f5dc602b42c549a32a51aa9236bb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 507f5dc602b42c549a32a51aa9236bb1, type: 3}
 --- !u!4 &7080193203263831082 stripped
 Transform:
