@@ -31,6 +31,5 @@ public class EnemyMove : MonoBehaviour
 
     void SahneDegis()
     {
-        Debug.Log(Container.Instance.PlayerStats.CurrentHealth);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,6 +37,6 @@ public class AnimationScript : MonoBehaviour
         //    secondAttack = false;
         //}
 
-        _animator.SetFloat("Blend", Input.GetAxis("Vertical") * GetComponent<Mover>()._stats.MoveSpeed);
+        _animator.SetFloat("Blend", Input.GetAxis("Vertical") * Container.Instance.PlayerStats.MoveSpeed);
     }
 }

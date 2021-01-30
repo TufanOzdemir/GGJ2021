@@ -1508,20 +1508,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4403300229901110888, guid: 2d92ad8f83f229146b26bfec6ad0915f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.3377266
-      objectReference: {fileID: 0}
-    - target: {fileID: 4531436281840374655, guid: 2d92ad8f83f229146b26bfec6ad0915f,
-        type: 3}
-      propertyPath: MoveSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4699943388931583193, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4699943388931583193, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
