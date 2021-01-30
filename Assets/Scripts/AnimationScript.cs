@@ -31,7 +31,7 @@ public class AnimationScript : MonoBehaviour
 
         //if (attackState && _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && secondAttack == true)
         //{
-        //    _animator.Play("New State");
+        //    _animator.Play("Attack2");
         //    secondAttack = false;
         //}
 
