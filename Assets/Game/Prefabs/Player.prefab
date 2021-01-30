@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 7080193203681940644}
   - component: {fileID: 7080193203681940642}
   - component: {fileID: 7080193203681940643}
-  - component: {fileID: 7080193203681940641}
+  - component: {fileID: 579342156}
+  - component: {fileID: 90973922}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c1ba27c02238f488a352a401b7af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!54 &7080193203681940643
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,10 +145,26 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &7080193203681940641
-BoxCollider:
+--- !u!114 &579342156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080193203681940645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f367eb3c2c309e74b89fc49dc0784397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 10
+  Attack: 10
+  MoveSpeed: 10
+  AttackSpeed: 10
+--- !u!136 &90973922
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,8 +173,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
+  m_Radius: 0.24
+  m_Height: 1.82
+  m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &7080193203263663456
 PrefabInstance:
