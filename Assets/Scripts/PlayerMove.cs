@@ -26,12 +26,13 @@ public class PlayerMove : MonoBehaviour
             VerticalAnimationPlay();
         }
 
-         if (Input.GetAxisRaw("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
             Vector3 sidewalk = Input.GetAxisRaw("Horizontal") < 0 ? -transform.right : transform.right;
             _rigidbody.MovePosition(_rigidbody.transform.position + sidewalk * _stats.MoveSpeed * Time.deltaTime);
             HorizontalAnimationPlay();
         }
+        ResetAnimator();
     }
 
     void VerticalAnimationPlay()
@@ -44,5 +45,16 @@ public class PlayerMove : MonoBehaviour
     {
         _animator.SetFloat("SideWalkSpeed", Mathf.Abs(Input.GetAxis("Horizontal")));
         _animator.SetFloat("Blend", Input.GetAxis("Horizontal") * _stats.MoveSpeed);
+    }
+
+    void ResetAnimator()
+    {
+        if (!Input.anyKey)
+        {
+            _animator.SetFloat("Blend", 0);
+            _animator.SetFloat("SideWalkSpeed", 0);
+        }
+
+      
     }
 }

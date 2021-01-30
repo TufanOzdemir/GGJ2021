@@ -16,6 +16,13 @@ public class EnemyMove : MonoBehaviour
     Animator _animator;
     GameObject _player;
 
+    [SerializeField] GameObject[] waypoints;
+    private int _currentWaypoint = 0;
+    private const float _waypointWaitTimeLimit = 5f;
+    private float _waypointWaitTime = 0f;
+    private bool _isAtWaypoint = false;
+
+
     private float time = 0;
     private float timeLimit = 3;
 
@@ -41,6 +48,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Patrol();
         PlayerNearby();
         AnimationPlay();
     }
@@ -81,6 +89,36 @@ public class EnemyMove : MonoBehaviour
 
     void AnimationPlay()
     {
-        _animator.SetFloat("Blend", _navMeshAgent.speed);
+        if (!_isAtWaypoint)
+            _animator.SetFloat("Blend", _navMeshAgent.speed);
+        else
+            _animator.SetFloat("Blend",  0);
+    }
+
+    void Patrol()
+    {
+        if (!_isAlarm && waypoints != null && waypoints.Length > 0)
+        {
+
+            if (_waypointWaitTime >= _waypointWaitTimeLimit)
+            {
+                _isAtWaypoint = false;
+                _waypointWaitTime = 0f;
+                _currentWaypoint = _currentWaypoint == waypoints.Length - 1 ? 0 : _currentWaypoint + 1;
+            }
+
+            if (Vector3.Distance(transform.position, waypoints[_currentWaypoint].transform.position) < 2f)
+            {
+                _isAtWaypoint = true;
+                _waypointWaitTime += Time.deltaTime;
+                return;
+            }
+
+            _navMeshAgent.destination = waypoints[_currentWaypoint].transform.position;
+        }
+        else
+        {
+            _isAtWaypoint = false;
+        }
     }
 }
