@@ -26,7 +26,6 @@ public class UIScript : MonoBehaviour
         RejectButton.onClick.AddListener(Clear);
 
         OkButton = InformationPanel.transform.GetChild(0).gameObject.GetComponent<Button>();
-        OkButton.onClick.AddListener(Clear);
     }
 
     public void ShowPopup(MainPopupDTO mainPopupDTO)
@@ -45,7 +44,7 @@ public class UIScript : MonoBehaviour
                 OkCancel(mainPopupDTO);
                 break;
             case PopupType.Information:
-                Information();
+                Information(mainPopupDTO);
                 break;
             case PopupType.Menu:
                 Menu();
@@ -74,9 +73,14 @@ public class UIScript : MonoBehaviour
         ConfirmButton.onClick.RemoveAllListeners();
         ConfirmButton.onClick.AddListener(mainPopupDTO.OkButtonClickAction);
     }
-    private void Information()
+    private void Information(MainPopupDTO mainPopupDTO)
     {
         InformationPanel.SetActive(true);
+        if (mainPopupDTO.OkButtonClickAction != null)
+        {
+            OkButton.onClick.AddListener(mainPopupDTO.OkButtonClickAction);
+        }
+        OkButton.onClick.AddListener(Clear);
     }
     private void MainMenu()
     {
