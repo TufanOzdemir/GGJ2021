@@ -4,19 +4,19 @@ public class Mover : MonoBehaviour
 {
 
     private Rigidbody _rigidbody;
-    private PlayerStats _stats;
-    private Animator _animator;
+    public PlayerStats _stats;
+ 
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _stats = GetComponent<PlayerStats>();
-        _animator = GetComponent<Animator>();
+      
     }
 
     void Start()
     {
-
+        
     }
 
     void Update()
@@ -28,6 +28,10 @@ public class Mover : MonoBehaviour
             _rigidbody.MovePosition( _rigidbody.transform.position + forward * _stats.MoveSpeed * Time.deltaTime);
         }
 
-        _animator.SetFloat("Blend", Input.GetAxis("Vertical") * _stats.MoveSpeed);
+       
+
+
+
+      
     }
 }
