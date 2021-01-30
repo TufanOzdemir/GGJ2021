@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5191644757312277335}
   - component: {fileID: 8752810086391573413}
   - component: {fileID: 1918348330817823507}
-  - component: {fileID: 2724556572996622491}
+  - component: {fileID: 2057464439}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
---- !u!114 &2724556572996622491
+--- !u!114 &2057464439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,19 +81,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 941392050313049425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
-  m_AngularDampingMode: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AngularDamping: 0
+  Damping: {x: 0.1, y: 0.5, z: 0}
+  ShoulderOffset: {x: 0.63, y: 0.04, z: -0.58}
+  VerticalArmLength: 0.4
+  CameraSide: 1
+  CameraDistance: 3.67
+  CameraCollisionFilter:
+    serializedVersion: 2
+    m_Bits: 1
+  IgnoreTag: 
+  CameraRadius: 0.2
 --- !u!1 &3806287017698038166
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582699510959492448}
+  - component: {fileID: 1648498427}
   m_Layer: 0
   m_Name: CameraFollow
   m_TagString: Untagged
@@ -124,6 +125,18 @@ Transform:
   m_Father: {fileID: 6675182915639920791}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648498427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806287017698038166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eeac2c4f19c46c4396ea004df0edb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8484454733166735628
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,14 +161,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8484454733166735628}
-  m_LocalRotation: {x: -0.34410095, y: -0.43905059, z: 0.18682235, w: -0.8086573}
-  m_LocalPosition: {x: -1.733574, y: 2.050075, z: -1.2135803}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.795, y: 1.0310001, z: -4.3377237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5191644757312277335}
   m_Father: {fileID: 4699943388931583193}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.834001, y: 0.45, z: 0}
 --- !u!114 &4120235428944696050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,9 +188,9 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1582699510959492448}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -230,6 +243,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4699943388931583193}
     m_Modifications:
+    - target: {fileID: 1871701002743230636, guid: beee15f157c4b9c4e80bc3ab612df3ba,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2924351244802677698, guid: beee15f157c4b9c4e80bc3ab612df3ba,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -254,6 +272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000029470888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509022415672540007, guid: beee15f157c4b9c4e80bc3ab612df3ba,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5560537768619267425, guid: beee15f157c4b9c4e80bc3ab612df3ba,
         type: 3}
@@ -404,6 +427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915007480519486275, guid: beee15f157c4b9c4e80bc3ab612df3ba,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8915007480519486276, guid: beee15f157c4b9c4e80bc3ab612df3ba,
         type: 3}

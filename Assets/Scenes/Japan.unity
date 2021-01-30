@@ -237,7 +237,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -263,7 +263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661945693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.795, y: 2.0310001, z: -4.0177236}
+  m_LocalPosition: {x: 0.795, y: 2.0310001, z: -4.3377237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -379,8 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.5}
-  ShoulderOffset: {x: 0.63, y: 0.04, z: -0.26}
+  Damping: {x: 0.1, y: 0.5, z: 0}
+  ShoulderOffset: {x: 0.63, y: 0.04, z: -0.58}
   VerticalArmLength: 0.4
   CameraSide: 1
   CameraDistance: 3.67
@@ -595,6 +595,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4120235428944696050, guid: 2d92ad8f83f229146b26bfec6ad0915f,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4403300229901110888, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -608,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 4403300229901110888, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.0177236
+      value: -4.3377237
       objectReference: {fileID: 0}
     - target: {fileID: 4403300229901110888, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
@@ -639,6 +644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531436281840374655, guid: 2d92ad8f83f229146b26bfec6ad0915f,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4699943388931583193, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
@@ -768,12 +778,17 @@ PrefabInstance:
     - target: {fileID: 6675182915639920784, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6675182915639920784, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
       propertyPath: m_Constraints
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675182915639920784, guid: 2d92ad8f83f229146b26bfec6ad0915f,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8484454733166735628, guid: 2d92ad8f83f229146b26bfec6ad0915f,
         type: 3}
