@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7511225551881387459}
   - component: {fileID: 7511225551880443227}
   - component: {fileID: 7556676181791359815}
+  - component: {fileID: 1970929588}
+  - component: {fileID: 1970929587}
   m_Layer: 0
   m_Name: Enhancement_Stone
   m_TagString: Untagged
@@ -95,6 +97,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43819370970262742, guid: c428d3501334340478456dfced8e9f91, type: 2}
+--- !u!135 &1970929588
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511225551878181543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.11
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1970929587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511225551878181543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec49443fb76a52449a699c0d270a8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _refreshHealth: 10
+  _statCount: 1
 --- !u!1 &7511225552385806621
 GameObject:
   m_ObjectHideFlags: 0
