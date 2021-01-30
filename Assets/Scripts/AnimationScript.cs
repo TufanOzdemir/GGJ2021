@@ -7,12 +7,15 @@ public class AnimationScript : MonoBehaviour
 {
 
     private Animator _animator;
+    private PlayerStats _playerStats;
     bool secondAttack = false;
 
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _playerStats = GetComponent<PlayerStats>();
+
     }
 
     void Update()
@@ -34,14 +37,5 @@ public class AnimationScript : MonoBehaviour
         //    _animator.Play("Attack2");
         //    secondAttack = false;
         //}
-
-        if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0)
-        {
-            _animator.SetFloat("SideWalkSpeed", Mathf.Abs( Input.GetAxis("Horizontal")));
-            _animator.SetFloat("Blend", Input.GetAxis("Horizontal") * Container.Instance.PlayerStats.MoveSpeed);
-            return;
-        }
-        _animator.SetFloat("SideWalkSpeed", 0);
-        _animator.SetFloat("Blend", Input.GetAxis("Vertical") * Container.Instance.PlayerStats.MoveSpeed);
     }
 }
