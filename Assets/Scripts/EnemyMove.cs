@@ -49,7 +49,7 @@ public class EnemyMove : MonoBehaviour
         if (Vector3.Distance(_player.transform.position,transform.position)<5f)
         {
             _navMeshAgent.destination = _player.transform.position;
-            _rigidbody.MovePosition(_navMeshAgent.destination);
+            //_rigidbody.MovePosition(_navMeshAgent.destination);
             
             
         }
