@@ -9,7 +9,7 @@ namespace Assets.Scripts
 
         private Container()
         {
-            PopupService = GameObject.FindGameObjectWithTag("Management").GetComponent<UIScript>();
+            //PopupService = GameObject.FindGameObjectWithTag("Management").GetComponent<UIScript>();
         }
     }
 }
